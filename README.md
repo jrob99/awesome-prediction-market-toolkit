@@ -105,10 +105,10 @@ If this list saves you some digging, a ⭐ on the repo helps more people find it
   - **Phase:** live.
   - **Added:** Aug 2026 · **Reviewed:** Aug 2026
 
-- **[PolyTrackers](https://polytrackers.com/)**: Polymarket copy trading for people and AI agents, with trader grades, a $10,000 Free paper wallet, real trades through MCP on every plan, and a separate copy backtest that accounts for fees and slippage.
+- **[PolyTrackers](https://polytrackers.com/)**: Polymarket copy trading for people and AI agents, with [trader grades](https://polytrackers.com/polymarket-trader-grade), a $10,000 Free paper wallet, [real trades through MCP on every plan](https://polytrackers.com/polymarket-mcp-server), and a separate [copy backtest](https://polytrackers.com/polymarket-trader-grade) that accounts for fees and slippage.
   Live orders require wallet funding and authorization; encrypted trading credentials are stored and orders signed on the server.
   - **Best for:** testing a wallet-following strategy with virtual funds before using real capital.
-  - **Team:** not publicly listed.
+  - **Team:** [PolyTrackers LLC](https://polytrackers.com/terms).
   - **Pricing:** Free; Pro $19/mo; Elite $49/mo; real taker fee 0.25%, maker 0%; venue fees separate.
   - **Phase:** live.
   - **Added:** Nov 2026 · **Reviewed:** Nov 2026
