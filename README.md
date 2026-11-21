@@ -15,23 +15,23 @@ If this list saves you some digging, a ⭐ on the repo helps more people find it
 
 ## 📊 At a Glance
 
-| Tools | Categories | Contributors | GitHub views (last 2 months) |
+| Tools | Categories | Contributors | GitHub views (Sep-Oct) |
 |---|---|---|---|
-| 68 (+5 since last update) | 8 | 29 (+4 since last update) | 1,059 |
+| 77 (+10 since last update) | 8 | 37 (+8 since last update) | 1,059 |
 
-*Updated every other Sunday.*
+*Updated on the 1st and 15th of every month.*
 
 ## Contents
 
 | Category | What it covers | Tools |
 |---|---|---|
-| [🌐 Cross-Platform Odds Aggregators](#cross-platform-odds-aggregators) | compare odds and volume across platforms at once. | 5 |
-| [🤖 Trade Copying & Automation](#trade-copying--automation) | mirror or auto-copy other traders' positions. | 7 |
-| [⚡ Trading Terminals & Execution](#trading-terminals--execution) | place and manage trades across venues from one interface. | 11 |
-| [📡 Signal & Fair-Value](#signal--fair-value) | spot mispriced markets and model-vs-market gaps. | 3 |
-| [🔍 Wallet & Trader Analytics](#wallet--trader-analytics) | research other traders' wallets and track records. | 15 |
-| [🐋 Alerts & Whale Monitoring](#alerts--whale-monitoring) | get pinged on big trades and unusual wallet activity. | 7 |
-| [🧠 Research & Market Discovery](#research--market-discovery) | find and dig into markets and data worth watching. | 16 |
+| [🌐 Cross-Platform Odds Aggregators](#cross-platform-odds-aggregators) | compare odds and volume across platforms at once. | 7 |
+| [🤖 Trade Copying & Automation](#trade-copying--automation) | mirror or auto-copy other traders' positions. | 8 |
+| [⚡ Trading Terminals & Execution](#trading-terminals--execution) | place and manage trades across venues from one interface. | 12 |
+| [📡 Signal & Fair-Value](#signal--fair-value) | spot mispriced markets and model-vs-market gaps. | 4 |
+| [🔍 Wallet & Trader Analytics](#wallet--trader-analytics) | research other traders' wallets and track records. | 16 |
+| [🐋 Alerts & Whale Monitoring](#alerts--whale-monitoring) | get pinged on big trades and unusual wallet activity. | 8 |
+| [🧠 Research & Market Discovery](#research--market-discovery) | find and dig into markets and data worth watching. | 18 |
 | [💸 Leverage, Lending & Yield](#leverage-lending--yield) | borrow against, lever up, or earn yield on positions. | 2 |
 | [☠️ No Longer Maintained](#no-longer-maintained) | tools that used to be here, now dead or abandoned. | 2 |
 
@@ -40,6 +40,13 @@ If this list saves you some digging, a ⭐ on the repo helps more people find it
 <a name="cross-platform-odds-aggregators"></a>
 
 ## 🌐 Cross-Platform Odds Aggregators
+
+- **[Predxy](https://predxy.com/)**: Index that matches the same question across 15 venues, including Polymarket and Kalshi, and combines them into one volume-weighted probability.
+  - **Best for:** finding the odds on a question without searching every venue.
+  - **Team:** not publicly listed.
+  - **Pricing:** free to browse; API pricing not yet published ([developers](https://predxy.com/developers)).
+  - **Phase:** live.
+  - **Added:** Nov 2026 · **Reviewed:** Nov 2026
 
 - **[Polyrama](https://polyrama.io/)**: Free real-time terminal and [open-source MCP server](https://github.com/Polyrama/mcp) for Polymarket and Kalshi: live odds, market search, wallet analytics, leaderboards and whale signals.
   The MCP tools support research and paper orders only, not live execution.
@@ -81,6 +88,14 @@ If this list saves you some digging, a ⭐ on the repo helps more people find it
   - **Phase:** live.
   - **Added:** Sep 2026 · **Reviewed:** Sep 2026
 
+- **[pdata](https://pdata.world/)**: Read-only aggregator of live odds, 24h volume and price history from 8 venues (Polymarket, Kalshi, Manifold, Myriad, Limitless, Predict, Opinion, Gemini) in one schema, with similar questions on other venues linked.
+  Free REST API, MCP server, nightly bulk files and read-only Postgres, no key or account. Cross-venue links are made automatically and can pair different questions. Price history is deleted 10 days after a market closes.
+  - **Best for:** reading odds from eight venues through one schema, without writing a client per venue.
+  - **Team:** not publicly listed.
+  - **Pricing:** free, no key or signup; fair use up to 50 requests a second per IP. Data under CC BY 4.0.
+  - **Phase:** live.
+  - **Added:** Nov 2026 · **Reviewed:** Nov 2026
+
 [↑ Back to top](#top)
 
 ---
@@ -105,9 +120,9 @@ If this list saves you some digging, a ⭐ on the repo helps more people find it
   - **Phase:** live.
   - **Added:** Aug 2026 · **Reviewed:** Aug 2026
 
-- **[PolyTrackers](https://polytrackers.com/)**: Polymarket copy trading for people and AI agents, with [trader grades](https://polytrackers.com/polymarket-trader-grade), a $10,000 Free paper wallet, [real trades through MCP on every plan](https://polytrackers.com/polymarket-mcp-server), and a separate [copy backtest](https://polytrackers.com/polymarket-trader-grade) that accounts for fees and slippage.
+- **[PolyTrackers](https://polytrackers.com/)**: Copy [graded Polymarket traders](https://polytrackers.com/polymarket-trader-grade) or test trades with a $10,000 paper wallet. Agents can [compare current sportsbook consensus](https://polytrackers.com/docs/api#sportsbook-gap-scanner) with the Polymarket price for their order size after fees on supported sports markets.
   Live orders require wallet funding and authorization; encrypted trading credentials are stored and orders signed on the server.
-  - **Best for:** testing a wallet-following strategy with virtual funds before using real capital.
+  - **Best for:** checking a trader’s historical entries with a [copy backtest](https://polytrackers.com/polymarket-trader-grade) that includes fees and slippage.
   - **Team:** [PolyTrackers LLC](https://polytrackers.com/terms).
   - **Pricing:** Free; Pro $19/mo; Elite $49/mo; real taker fee 0.25%, maker 0%; venue fees separate.
   - **Phase:** live.
@@ -145,6 +160,14 @@ If this list saves you some digging, a ⭐ on the repo helps more people find it
   - **Phase:** live (v0.1.0).
   - **Added:** Sep 2026 · **Reviewed:** Sep 2026
 
+- **[Windmill](https://windmill.markets/)**: Hosted builder that turns a plain-English strategy into an AI agent trading Kalshi on a schedule, on paper or live by connecting your Kalshi account.
+  Paper orders fill against Kalshi's live order books with Kalshi's fees; its own [published paper tests](https://windmill.markets/research/kalshi-90-strategies) (90 strategies, 4,200 settled bets) found no lasting edge.
+  - **Best for:** testing a Kalshi rule on paper before putting money on it.
+  - **Team:** not publicly listed.
+  - **Pricing:** free tier (paper and live, limited daily runs); [Pro $20/mo](https://windmill.markets/pricing).
+  - **Phase:** live.
+  - **Added:** Oct 2026 · **Reviewed:** Oct 2026
+
 [↑ Back to top](#top)
 
 ---
@@ -152,6 +175,14 @@ If this list saves you some digging, a ⭐ on the repo helps more people find it
 <a name="trading-terminals--execution"></a>
 
 ## ⚡ Trading Terminals & Execution
+
+- **[EVDESK](https://evdesk.ai/)**: Trading desk for Kalshi: every open market, the full order book, the fee on both routes (take now or rest a limit order), Kelly sizing, and order placement on Kalshi from your own account.
+  Also runs free Kalshi tools: a [fee calculator](https://evdesk.ai/tools/kalshi-fee-calculator), an [odds converter](https://evdesk.ai/tools/kalshi-odds-converter) that shows the after-fee break-even, and a [Kelly and EV calculator](https://evdesk.ai/tools/kelly-ev-calculator).
+  - **Best for:** Kalshi traders who want book depth, the exact fee and position sizing on one screen before they place an order.
+  - **Team:** EVDESK LLC (New Mexico); individuals not publicly listed.
+  - **Pricing:** tools free; desk from $149/mo after a three-day trial.
+  - **Phase:** live.
+  - **Added:** Nov 2026 · **Reviewed:** Nov 2026
 
 - **[Lucyd MCP](https://github.com/Lucyd-trade/mcp-server)**: Open-source MCP server for trading Lucyd's onchain Bitcoin Up/Down markets (5m to daily) from Claude, Cursor or any MCP agent.
   Keys stay local; without a key it runs read-only. Lucyd currently runs on testnet (Sepolia).
@@ -272,6 +303,14 @@ If this list saves you some digging, a ⭐ on the repo helps more people find it
   - **Pricing:** contract record free to view; the $29/month plan covers spot alerts, not contracts.
   - **Phase:** beta (shadow validation).
   - **Added:** Oct 2026 · **Reviewed:** Oct 2026
+
+- **[NeuPortal Forecast Ledger](https://neuportal.ai/experiment)**: Public log of 7,400+ model forecasts on Polymarket questions, each next to the market price at the call, Bitcoin-timestamped with OpenTimestamps and Brier-scored.
+  The market is ahead so far: Brier 0.161 for the market vs 0.194 for the model (Zenodo snapshot, as of Nov 7, 2026; the live page updates daily). The first batch (Sep 14–26) was sealed late and is flagged in the data.
+  - **Best for:** checking whether a model really beats the market price, misses included.
+  - **Team:** NeuPortal.
+  - **Pricing:** the ledger is free; data under CC BY 4.0 (DOI 10.5281/zenodo.24051884). Note: NeuPortal also sells AI trading agents; this entry covers the free ledger only.
+  - **Phase:** live.
+  - **Added:** Nov 2026 · **Reviewed:** Nov 2026
 
 [↑ Back to top](#top)
 
@@ -397,6 +436,14 @@ If this list saves you some digging, a ⭐ on the repo helps more people find it
   - **Phase:** live.
   - **Added:** Oct 2026 · **Reviewed:** Oct 2026
 
+- **[Polyrank](https://polyrank.app/)**: Scores 3.3M Polymarket wallets on forecasting skill (calibration, edge over the price paid, risk-adjusted return) instead of P&L, with a free wallet lookup and no account needed.
+  Paid AI Lab backtests and paper-trades copy strategies (simulated; nothing places orders). Read-only; REST API and MCP server.
+  - **Best for:** checking whether a wallet's record reflects forecasting skill or luck.
+  - **Team:** DefiScout LLC (per polyrank.app/tos).
+  - **Pricing:** free lookup and top-100 board; paid tiers from $45/month ([pricing](https://polyrank.app/pricing)).
+  - **Phase:** live.
+  - **Added:** Nov 2026 · **Reviewed:** Nov 2026
+
 [↑ Back to top](#top)
 
 ---
@@ -460,6 +507,14 @@ If this list saves you some digging, a ⭐ on the repo helps more people find it
   - **Phase:** live.
   - **Added:** Sep 2026 · **Reviewed:** Sep 2026
 
+- **[Anveric](https://anveric.com/)**: Windows app for monitoring Kalshi positions and combo legs, with alerts, phone companions and optional armed exit plans (including whole-combo RFQ sells).
+  API keys stay on your desktop, which must stay on and online. Places real sell orders only under plans you arm.
+  - **Best for:** watching existing Kalshi holdings and setting exits in advance.
+  - **Team:** [Anveric LLC](https://anveric.com/about).
+  - **Pricing:** free public beta until Dec 9, 2026; beta users keep a free lifetime license.
+  - **Phase:** public beta.
+  - **Added:** Nov 2026 · **Reviewed:** Nov 2026
+
 [↑ Back to top](#top)
 
 ---
@@ -474,6 +529,13 @@ If this list saves you some digging, a ⭐ on the repo helps more people find it
   - **Pricing:** free calculator; DegenHedge also offers separate paid Telegram monitoring.
   - **Phase:** live.
   - **Added:** Oct 2026 · **Reviewed:** Oct 2026
+
+- **[pmfees](https://github.com/swaphunt/pmfees)**: Python library and CLI that computes trading fees and break-even prices for Kalshi and Polymarket, sourced from official fee schedules (some fee types not yet covered).
+  - **Best for:** checking the fee and break-even move on a trade, or using dated fee constants in code.
+  - **Team:** SwapHunt.
+  - **Pricing:** free, open source (MIT).
+  - **Phase:** live.
+  - **Added:** Nov 2026 · **Reviewed:** Nov 2026
 
 - **[Poly Helper](https://polyhelper.io/)**: Free Chrome/Brave extension embedding 18+ contextual data panels directly into the Polymarket interface.
   Crypto prices, sports scores, macro data, whale tracking, and news, all in-context.
@@ -575,6 +637,13 @@ If this list saves you some digging, a ⭐ on the repo helps more people find it
   - **Pricing:** $10/mo per venue ($18 for both); one-off date ranges and backtest credits sold separately.
   - **Phase:** live.
   - **Added:** Oct 2026 · **Reviewed:** Oct 2026
+
+- **[PaperMantis](https://papermantis.app/)**: Backtesting and paper trading sandbox for Polymarket’s 5- and 15-minute BTC, ETH and SOL Up/Down markets only. Test rules on recorded data and track compatible strategies with virtual money.
+  - **Best for:** checking whether a rule still holds up on new markets after a historical backtest.
+  - **Team:** [Vitalii Stepanenko](https://papermantis.app/about/), solo founder.
+  - **Pricing:** free (free account required).
+  - **Phase:** live.
+  - **Added:** Nov 2026 · **Reviewed:** Nov 2026
 
 - **[Glypse](https://glypse.ai/)**: Market screener and event research for prediction markets, with briefings, social sentiment analysis, and a custom-pair arbitrage scanner. Free to use without an account.
   - **Best for:** researching the events and social sentiment behind prediction market prices.
